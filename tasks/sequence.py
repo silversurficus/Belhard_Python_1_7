@@ -18,14 +18,18 @@
 """
 import random
 
+
 class RandSequence:
     n: int
     sequence: list
 
     def __init__(self, some_n):
+        self.n = some_n
         self.sequence = random.sample(range(-some_n, some_n), some_n)
 
-    def generate(self, some_n):
+    def generate(self, some_n=None):
+        if some_n is None:
+            some_n = self.n
         self.sequence = []
         for i in range(some_n):
             k = random.randint(-some_n, some_n)
@@ -33,4 +37,3 @@ class RandSequence:
 
     def print_seq(self):
         print(f"{self.sequence}")
-

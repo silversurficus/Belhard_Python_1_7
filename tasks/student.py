@@ -28,10 +28,10 @@ class Student:
     average_score: float
 
     def __init__(self, some_surname, some_name, some_group, some_average_score):
-        self.surname=some_surname
-        self.name=some_name
-        self.group=some_group
-        self.average_score=some_average_score
+        self.surname = some_surname
+        self.name = some_name
+        self.group = some_group
+        self.average_score = some_average_score
 
     def __gt__(self, other):
         return self.average_score > other.average_score
@@ -50,14 +50,16 @@ class Student:
 
     def __eq__(self, other):
         return self.average_score == other.average_score
+
+
 sorted_student_list_2 = []
 sorted_student_list_1 = []
-student_1=Student("surname1", "name1", 5, 7.6)
-student_2=Student("surname2", "name2", 3, 9.6)
-student_3=Student("surname3", "name3", 1, 4.6)
-student_4=Student("surname4", "name4", 2, 7.3)
-student_5=Student("surname5", "name5", 3, 7.7)
-student_list=[student_1, student_2, student_3, student_4, student_5]
+student_1 = Student("surname1", "name1", 5, 7.6)
+student_2 = Student("surname2", "name2", 3, 9.6)
+student_3 = Student("surname3", "name3", 1, 4.6)
+student_4 = Student("surname4", "name4", 2, 7.3)
+student_5 = Student("surname5", "name5", 3, 7.7)
+student_list = [student_1, student_2, student_3, student_4, student_5]
 for i in sorted(student_list):
     sorted_student_list_1.append(i.name)
 for i in sorted(student_list, reverse=True):
@@ -65,5 +67,5 @@ for i in sorted(student_list, reverse=True):
 print(sorted_student_list_1)
 print(sorted_student_list_2)
 for i in student_list:
-    if i.average_score>5.0:
+    if i.average_score > 5.0:
         print(i.name)

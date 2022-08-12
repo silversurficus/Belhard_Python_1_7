@@ -22,7 +22,7 @@
 class Counter:
     value: int
 
-    def __init__(self, some_value = 0):
+    def __init__(self, some_value=0):
         self.value = some_value
 
     def increase(self, num=1):
@@ -38,6 +38,7 @@ class Counter:
         value = self.value
         self.value += 1
         return value
+
 
 class_obj = Counter(111)
 class_obj.increase()
